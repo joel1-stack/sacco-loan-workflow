@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Loan Workflow - NGO Project Management</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 40px; padding: 40px 0; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: #666; font-size: 1.2rem; }
+        .badges { margin-top: 20px; }
+        .badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin: 0 5px; }
+        .badge-jira { background: #0052cc; color: white; }
+        .badge-confluence { background: #172b4d; color: white; }
+        .badge-ngo { background: #00875a; color: white; }
+        .section { background: white; border-radius: 8px; padding: 30px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e1e4e8; }
+        .folder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+        .folder-card { background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+        .folder-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .folder-icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .folder-name { font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+        .folder-desc { font-size: 0.9rem; color: #666; }
+        .file-list { list-style: none; }
+        .file-list li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+        .file-list li:last-child { border-bottom: none; }
+        .file-name { font-family: monospace; color: #0366d6; }
+        .file-size { color: #999; font-size: 0.85rem; }
+        .hierarchy { background: #f6f8fa; border-radius: 6px; padding: 20px; font-family: monospace; font-size: 0.85rem; line-height: 1.8; white-space: pre-wrap; overflow-x: auto; }
+        .cta { text-align: center; margin-top: 30px; }
+        .btn { display: inline-block; padding: 12px 28px; background: #0366d6; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+        .btn:hover { background: #0256b9; }
+        .github-link { color: #0366d6; text-decoration: none; }
+        .github-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 SACCO Loan Workflow</h1>
+            <p class="subtitle">NGO Project Management with Jira + Confluence</p>
+            <div class="badges">
+                <span class="badge badge-jira">Jira Workflow</span>
+                <span class="badge badge-confluence">Confluence Knowledge</span>
+                <span class="badge badge-ngo">NGO Project</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>📋 Project Hierarchy</h2>
+            <div class="hierarchy">ORGANIZATION (01-business)
+      │
+      ▼
+BUSINESS PROCESS (02-process)
+      │
+      ▼
+WORKFLOW (03-workflow)
+      │
+      ├── BACKLOG → PLANNING → IN PROGRESS
+      │       → REVIEW → APPROVED → COMPLETED
+      │
+      ▼
+TASKS (04-tasks)
+      │
+      ▼
+PEOPLE / OWNERS (05-people)
+      │
+      ▼
+PROGRESS / STATUS (06-progress)
+      │
+      ▼
+DETAILS / EVIDENCE (07-reports)
+      │
+      ▼
+REPORTS (07-reports)
+      │
+      ▼
+COLLABORATION (08-collaboration)
+      │
+      ▼
+AUTOMATION / AI (09-automation)
+      │
+      ▼
+CONFLUENCE SETUP (10-confluence)</div>
+        </section>
+
+        <section class="section">
+            <h2>📁 Documentation Folders</h2>
+            <div class="folder-grid">
+                <div class="folder-card">
+                    <div class="folder-icon">🏢</div>
+                    <div class="folder-name">01-business</div>
+                    <div class="folder-desc">Organization level, objectives, success criteria</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">🔄</div>
+                    <div class="folder-name">02-process</div>
+                    <div class="folder-desc">Business process definition, process map, stages</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">⚡</div>
+                    <div class="folder-name">03-workflow</div>
+                    <div class="folder-desc">Jira + Confluence workflow, statuses, transitions</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">📝</div>
+                    <div class="folder-name">04-tasks</div>
+                    <div class="folder-desc">Task templates, examples, acceptance criteria</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">👥</div>
+                    <div class="folder-name">05-people</div>
+                    <div class="folder-desc">Roles matrix, RACI, team assignments</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">📊</div>
+                    <div class="folder-name">06-progress</div>
+                    <div class="folder-desc">Progress tracking, status definitions, dashboard</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">📄</div>
+                    <div class="folder-name">07-reports</div>
+                    <div class="folder-desc">Evidence types, report templates, workflows</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">🤝</div>
+                    <div class="folder-name">08-collaboration</div>
+                    <div class="folder-desc">Jira + Confluence collaboration guidelines</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">🤖</div>
+                    <div class="folder-name">09-automation</div>
+                    <div class="folder-desc">Automation opportunities, AI possibilities</div>
+                </div>
+                <div class="folder-card">
+                    <div class="folder-icon">📚</div>
+                    <div class="folder-name">10-confluence</div>
+                    <div class="folder-desc">Confluence setup, permissions, page structure</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📄 Root Files</h2>
+            <ul class="file-list">
+                <li><span class="file-name">README.md</span><span class="file-size">3.7 KB</span></li>
+                <li><span class="file-name">QUICK-START.md</span><span class="file-size">1.2 KB</span></li>
+                <li><span class="file-name">run-setup.ps1</span><span class="file-size">1.5 KB</span></li>
+                <li><span class="file-name">vercel.json</span><span class="file-size">Config</span></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🚀 Quick Start</h2>
+            <ol style="padding-left: 20px; color: #444;">
+                <li><strong>Jira:</strong> Create project → Add statuses → Create 5 sample tasks</li>
+                <li><strong>Confluence:</strong> Create space → Set permissions → Create 2 pages</li>
+                <li><strong>Connect:</strong> Link Jira tasks to Confluence pages</li>
+                <li><strong>Practice:</strong> Move tasks, add comments, upload evidence</li>
+            </ol>
+            <div class="cta">
+                <a href="README.md" class="btn">View Full Documentation</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔗 Links</h2>
+            <p style="color: #444;">
+                <strong>GitHub Repository:</strong> <a href="https://github.com/joel1-stack/sacco-loan-workflow" class="github-link" target="_blank">github.com/joel1-stack/sacco-loan-workflow</a>
+            </p>
+            <p style="color: #444; margin-top: 10px;">
+                <strong>Core Skill:</strong> How to turn a business process into a collaborative digital operating workflow using Jira + Confluence
+            </p>
+        </section>
+    </div>
+</body>
+</html>
